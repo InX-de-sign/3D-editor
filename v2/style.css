@@ -1,0 +1,88 @@
+/* style.css */
+body { 
+    margin: 0; 
+    overflow: hidden; 
+    background: #808080; 
+    touch-action: none;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* cursor: pointer; */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button:active{
+    transform: scale(0.95);
+}
+
+canvas { 
+    display: block; 
+}
+
+#error-display {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: red;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    font-family: monospace;
+    z-index: 1000;
+    display: none;
+}
+
+.sculpt-button {
+    position: fixed;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #333;
+    color: white;
+    font-size: 18px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    z-index: 1000;
+}
+
+#sculptMode-btn {
+    bottom: 20px;
+    left: 20px;
+}
+
+#add-btn {
+    bottom: 20px;
+    left: 140px;
+    background: #4CAF50;
+}
+
+#subtract-btn {
+    bottom: 20px;
+    left: 220px;
+    background: #f44336;
+}
+
+.sculpt-button.active {
+    background: #666;
+    transform: scale(0.95);
+    transition: transform 0.1s;
+}
+
+.sculpt-indicator {
+    position: absolute;
+    border: 2px solid white;
+    border-radius: 50%;
+    pointer-events: none;
+    display: none;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}

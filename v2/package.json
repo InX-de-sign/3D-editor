@@ -1,0 +1,31 @@
+{
+    "name": "3d-editor",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder build --linux",
+        "build:armv7l": "electron-builder build --linux --armv7l"
+    },
+    "dependencies": {
+        "@types/three": "^0.176.0",
+        "three": "^0.176.0",
+        "three-mesh-bvh": "^0.9.0"
+    },
+    "devDependencies": {
+        "electron": "^36.2.1",
+        "electron-builder": "^24.13.3"
+    },
+    "build": {
+        "appId": "com.your-name.3d-editor",
+        "productName": "3D Editor",
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Graphics",
+            "executableName": "3d-editor",
+            "artifactName": "${productName}-${version}.${ext}"
+        }
+    }
+}
